@@ -1,8 +1,6 @@
-import pdb
 import random
 
-from titles import tvshows
-from titles import movies
+from watchlist import tvshows, movies
 
 
 def get_movie():
@@ -19,8 +17,9 @@ def get_tvshow():
 
 def choose():
     video_type = input("""
-    [1] Movies
-    [2] TVShows
+    The first choice you have to make:
+    [1] Movie
+    [2] TVShow
 
     Only the number, please: """)
 
@@ -35,7 +34,7 @@ def choose():
     Where: {movie['broadcaster']}
     """)
 
-    if video_type == '2':
+    elif video_type == '2':
         tvshow = get_tvshow()
         print(f"""
     TVShow: {tvshow['title']}
